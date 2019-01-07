@@ -1,5 +1,4 @@
 require_relative "../helpers/calculate.rb"
-require 'pry'
 
 module Service
   class Reporter
