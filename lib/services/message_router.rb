@@ -2,7 +2,6 @@ require_relative '../models/driver.rb'
 require_relative '../models/trip.rb'
 require_relative 'reporter.rb'
 
-
 module Service
   class MessageRouter
     attr_reader :data, :drivers, :trips
@@ -19,7 +18,9 @@ module Service
       end
       process_result
     end
-
+    
+    private
+    
     def process_row(n)
       row = data[n]
       puts row
@@ -32,7 +33,6 @@ module Service
       create_report(drivers)
     end
     
-    private
     
     def send_row(row)
       cmd = row.command

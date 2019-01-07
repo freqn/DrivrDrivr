@@ -1,14 +1,14 @@
 require_relative './message_router.rb'
 require_relative './reporter.rb'
-require 'pry'
 
 module Service
   class Messenger
 
     def self.run
-      params = build_params(ARGF)
-      MessageRouter.new(params).send
+      route_messages(build_params(ARGF))
     end
+
+    private
 
     def self.build_params(text)
       @params, @id = {}, 0
@@ -24,6 +24,10 @@ module Service
       msg = msg.split
       @id += 1 unless msg.empty?
       @params[@id] = Message.new(*msg)
+    end
+
+    def self.route_messages(params)
+      MessageRouter.new(params).send
     end
   end
 end
