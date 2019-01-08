@@ -3,8 +3,8 @@ require_relative "../helpers/calculate.rb"
 module Service
   class Reporter
     def initialize(data)
-      @data = data
-      @report_data = []
+      @data         = data
+      @report_data  = []
     end
 
     def generate
