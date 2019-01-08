@@ -1,10 +1,9 @@
 require_relative('services/messenger.rb')
-
 class Application
 
-  def initialize
-    Service::Messenger.run
+  def self.run
+    Service::Messenger.new(ARGF)
   end
 end
 
-Application.new
+Application.run

@@ -33,7 +33,6 @@ module Service
       create_report(drivers)
     end
     
-    
     def send_row(row)
       cmd = row.command
       command(cmd, row)

@@ -1,5 +1,3 @@
-require 'pry'
-
 module Model
   class Driver
     attr_reader :name, :id

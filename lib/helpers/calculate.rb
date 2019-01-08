@@ -29,6 +29,6 @@ class Calculate
   end
 
   def self.travel_time(depart, arrive)
-    ((arrive - depart) / 60)
+    (arrive - depart) / 60
   end
 end

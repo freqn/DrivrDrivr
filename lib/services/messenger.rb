@@ -4,15 +4,16 @@ require_relative './reporter.rb'
 module Service
   class Messenger
 
-    def self.run
-      route_messages(build_params(ARGF))
+    def initialize(data)
+      route_messages(build_params(data))
     end
 
     private
 
-    def self.build_params(text)
+    def build_params(text)
       @params, @id = {}, 0
       text.each do |t|
+        t.include?("\n") ? t = t.delete("\n") : t
         objectify(t)
       end
       @params
@@ -20,16 +21,14 @@ module Service
     
     Message = Struct.new(:command, :driver, :depart, :arrive, :dist)
     
-    def self.objectify(msg)
+    def objectify(msg)
       msg = msg.split
       @id += 1 unless msg.empty?
       @params[@id] = Message.new(*msg)
     end
-
-    def self.route_messages(params)
+    
+    def route_messages(params)
       MessageRouter.new(params).send
     end
   end
 end
-
-Service::Messenger.run

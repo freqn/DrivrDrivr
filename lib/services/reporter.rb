@@ -27,7 +27,7 @@ module Service
         total_miles, avg_speed = 0,0
       else
         total_miles = Calculate.total_miles(v.trips)
-        avg_speed = Calculate.avg_speed(v.trips)
+        avg_speed   = Calculate.avg_speed(v.trips)
       end
       structify(driver, total_miles, avg_speed)
     end
@@ -39,7 +39,7 @@ module Service
     end
 
     def build_file(driver_data)
-      location = "../../output.txt"
+      location = "../output.txt"
       File.open(location, 'w') do |file| 
         write_file(driver_data, file)
       end
