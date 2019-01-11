@@ -19,6 +19,7 @@ I approached the project as a receiver that generates a report based on the mess
 
 1) **MessageHandler**: Receives the input passed from `Application` and hands the messages to the dispatcher.
 2) **MessageDispatcher**: Processes the messages for routing and model instantiation (`Driver` & `Trip`)
+3) **Reporter**: Generates output.txt
 
 ### Saver
 
