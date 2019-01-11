@@ -1,5 +1,4 @@
 class Calculate
-
   def self.total_miles(trips)
     sum = 0
     trips.each do |trip|

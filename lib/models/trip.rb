@@ -1,3 +1,4 @@
+require_relative '../helpers/calculate.rb'
 require 'time'
 
 module Model     
@@ -9,18 +10,16 @@ module Model
                 :speed, 
                 :driver_id
     
-    def initialize(id, data)
+    def initialize(driver_id, data)
       @driver = data.driver
       @depart = Time.parse(data.depart)
       @arrive = Time.parse(data.arrive)
       @dist   = data.dist
-      @speed  = get_speed
-      @driver_id = id
+      @speed  = speed
+      @driver_id = driver_id
     end
 
-    private 
-
-    def get_speed
+    def speed
       Calculate.speed(dist, depart, arrive)
     end
 

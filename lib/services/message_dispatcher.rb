@@ -1,9 +1,11 @@
 require_relative '../models/driver.rb'
 require_relative '../models/trip.rb'
+require_relative '../savers/trip_saver.rb'
 require_relative 'reporter.rb'
 
 module Service
-  class MessageRouter
+  class MessageDispatcher
+    include Saver
     attr_reader :data, :drivers, :trips
 
     def initialize(messages)
@@ -23,7 +25,6 @@ module Service
     
     def process_row(n)
       row = data[n]
-      puts row
       send_row(row)
     end
 
@@ -69,11 +70,9 @@ module Service
 
     def add_trips_to_drivers(result)
       result[:drivers].each do |k, v|
-        result[:trips].each do |x, y|
-          if v.id == y.driver_id
-            v.trips << y
-          end
-        end
+        trips = result[:trips]
+        driver_trips = trips.select {|x, y| y.driver_id == v.id}
+        driver_trips.each {|id, trip| Saver::TripSaver.save(v, trip)}
       end
     end
 
