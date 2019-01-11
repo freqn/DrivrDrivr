@@ -8,7 +8,7 @@
 
 ## Design Notes
 
-An input file is passed into the application by a user in exchange for a generated text report of drivers' trip data
+**Synopsis**: An input file is passed into the application by a user in exchange for a generated text report of drivers' trip data
 
 ### Models
 
