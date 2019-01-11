@@ -8,11 +8,11 @@
 
 ## Design Notes
 
-I approached the project as a receiver that generates a report based on the messages passed from the input (file provided by the user in this case).
+An input file is passed into the application by a user in exchange for a generated text report of drivers' trip data
 
 ### Models
 
-1) **Driver**: Driver class with necessary getter/attr methods
+1) **Driver**: Driver class with necessary getter methods
 2) **Trip**: Trip class with necessary gett/attr methods
 
 ### Services
@@ -31,7 +31,7 @@ I approached the project as a receiver that generates a report based on the mess
    
 ## Testing Appoach
 
-1) I used RSpec to test model creation and behavior, simulating input with mocked data.
+1) I used RSpec to test model creation and behavior with mocked data
 
 
 

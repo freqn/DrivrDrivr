@@ -46,7 +46,7 @@ module Service
       when "Trip"
         register_trip(row)
       else
-        raise "Skipping - Invalid Command"
+        raise "ERROR - Input file commands must start with 'Driver' or 'Trip'"
       end
     end
 

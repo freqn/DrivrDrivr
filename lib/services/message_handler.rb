@@ -12,8 +12,7 @@ module Service
 
     def build_params(text)
       @params, @id = {}, 0
-      text.each do |t|
-        t.include?("\n") ? t = t.delete("\n") : t
+      text.split("\n").each do |t|
         objectify(t)
       end
       @params
