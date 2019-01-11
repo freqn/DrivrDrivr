@@ -29,7 +29,7 @@ I approached the project as a receiver that generates a report based on the mess
 
 1) **Calculate**: A behavoral class for calculating speed
 
-### Testing Appoach
+## Testing Appoach
 
 1) I used RSpec to test model creation and behavior, simulating input with mocked data.
 
