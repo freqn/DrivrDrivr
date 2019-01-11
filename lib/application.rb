@@ -1,4 +1,4 @@
-require_relative('services/messenger.rb')
+require_relative('services/message_handler.rb')
 class Application
 
   def self.run(data)

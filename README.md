@@ -17,18 +17,18 @@ I approached the project as a receiver that generates a report based on the mess
 
 ### Services
 
-1) **MessageHandler**: Receives the input passed from `Application` and hands the messages to the dispatcher.
+1) **MessageHandler**: Receives the input passed from `Application` and hands the message params to the dispatcher.
 2) **MessageDispatcher**: Processes the messages for routing and model instantiation (`Driver` & `Trip`)
 3) **Reporter**: Generates output.txt
 
 ### Saver
 
-1) **TripSaver**: Associates trips to their corresponding drivers, instantiated from `MessageDispatcher`
+1) **DriverTrip**: Associates trips to their corresponding drivers if speed less than 5mph or greater than 100 mph
 
 ### Helper
 
 1) **Calculate**: A behavoral class for calculating speed
-
+   
 ## Testing Appoach
 
 1) I used RSpec to test model creation and behavior, simulating input with mocked data.
