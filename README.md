@@ -1,16 +1,16 @@
 # Drive Tracking
 
-### Usage
+## Usage
 
 1) Navigate to the lib directory of the project.
 2) Run `ruby application.rb ../input.txt` (replace `../input.txt` with your own file path if needed)
 3) Check the root directory for your `output.txt` to validate the desired scope of the exercise
 
-### Design Notes
+## Design Notes
 
 I approached the project as a receiver that generates a report based on the messages passed from the input (file provided by the user in this case).
 
-#### Models
+### Models
 
 1) **Driver**: Driver class with necessary getter/attr methods
 2) **Trip**: Trip class with necessary gett/attr methods
