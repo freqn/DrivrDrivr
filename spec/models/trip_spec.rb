@@ -1,6 +1,6 @@
 require_relative '../../lib/models/driver.rb'
 require_relative '../../lib/models/trip.rb'
-require_relative '../../lib/savers/trip_saver.rb'
+require_relative '../../lib/savers/driver_trips.rb'
 require_relative '../spec_helper.rb'
 
 RSpec.describe Model::Trip do
@@ -44,7 +44,7 @@ RSpec.describe Model::Trip do
     end
 
     it 'adds the trip to the driver' do
-      Saver::TripSaver.save(driver, trip)
+      Saver::DriverTrips.new(driver, trip).save
       expect(driver.trips.first).to eq(trip)
     end
   end

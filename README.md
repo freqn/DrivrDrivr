@@ -31,7 +31,7 @@ An input file is passed into the application by a user in exchange for a generat
    
 ## Testing Appoach
 
-1) I used RSpec to test model creation and behavior with mocked data
+1) RSpec is used test model creation and behavior with mocked data
 
 
 
