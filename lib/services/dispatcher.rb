@@ -4,7 +4,7 @@ require_relative '../savers/driver_trips.rb'
 require_relative 'reporter.rb'
 
 module Service
-  class MessageDispatcher
+  class Dispatcher
     include Saver
     attr_reader :data, :drivers, :trips
 

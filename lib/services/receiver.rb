@@ -1,8 +1,8 @@
-require_relative './message_dispatcher.rb'
+require_relative './dispatcher.rb'
 require_relative './reporter.rb'
 
 module Service
-  class MessageHandler
+  class Receiver
 
     def initialize(data)
       route_messages(build_params(data))
@@ -27,7 +27,7 @@ module Service
     end
     
     def route_messages(params)
-      MessageDispatcher.new(params).send
+      Dispatcher.new(params).send
     end
   end
 end

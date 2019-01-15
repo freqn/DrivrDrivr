@@ -1,4 +1,4 @@
-require_relative "../helpers/calculate.rb"
+require_relative '../helpers/calculate.rb'
 
 module Service
   class Reporter

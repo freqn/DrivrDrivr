@@ -2,7 +2,7 @@ class Calculate
   def self.total_miles(trips)
     sum = 0
     trips.each do |trip|
-      sum += trip.dist.to_f
+      sum += trip.dist
     end
     rounder(sum)
   end

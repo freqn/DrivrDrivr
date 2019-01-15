@@ -14,7 +14,7 @@ module Model
       @driver = data.driver
       @depart = Time.parse(data.depart)
       @arrive = Time.parse(data.arrive)
-      @dist   = data.dist
+      @dist   = data.dist.to_f
       @speed  = speed
       @driver_id = driver_id
     end

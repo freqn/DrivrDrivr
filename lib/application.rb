@@ -1,4 +1,4 @@
-require_relative('services/message_handler.rb')
+require_relative 'services/receiver.rb'
 
 class Application
   def initialize(input)
@@ -7,7 +7,7 @@ class Application
   end
 
   def run
-    Service::MessageHandler.new(@data)
+    Service::Receiver.new(@data)
   end
 
   def raise_error
