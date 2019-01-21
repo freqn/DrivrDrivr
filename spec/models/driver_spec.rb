@@ -1,4 +1,4 @@
-require_relative '../../lib/models/driver.rb'
+require_relative '../../app/models/driver.rb'
 require_relative '../spec_helper.rb'
 
 RSpec.describe Model::Driver do

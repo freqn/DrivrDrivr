@@ -3,7 +3,6 @@ require_relative './reporter.rb'
 
 module Service
   class Receiver
-
     def initialize(data)
       route_messages(build_params(data))
     end

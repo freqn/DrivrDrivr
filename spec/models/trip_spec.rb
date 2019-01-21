@@ -1,6 +1,6 @@
-require_relative '../../lib/models/driver.rb'
-require_relative '../../lib/models/trip.rb'
-require_relative '../../lib/savers/driver_trips.rb'
+require_relative '../../app/models/driver.rb'
+require_relative '../../app/models/trip.rb'
+require_relative '../../app/savers/driver_trips.rb'
 require_relative '../spec_helper.rb'
 
 RSpec.describe Model::Trip do
